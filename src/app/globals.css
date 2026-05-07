@@ -1980,6 +1980,18 @@ a { color: inherit; text-decoration: none; }
   flex-direction: row-reverse;
 }
 
+/* Pour les items inversés : texte aligné à droite → colle à l'image */
+.cseq__item--reverse .cseq__text {
+  text-align: right;
+  align-items: flex-end;
+  border-left: none !important;
+  border-right: 1px solid rgba(180, 148, 90, 0.15);
+}
+
+.cseq__item--reverse .cseq__cta {
+  flex-direction: row-reverse;
+}
+
 /* ── Image pane (60%) ── */
 
 .cseq__img {
