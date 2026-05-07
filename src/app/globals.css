@@ -715,7 +715,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* Suppression de l'animation si prefers-reduced-motion */
-.ghost-logo[data-reduced="true"] .ghost-logo__img,
+.ghost-logo[data-reduced="true"] .ghost-logo__img { animation: none !important; }
 @media (prefers-reduced-motion: reduce) {
   .ghost-logo--visible .ghost-logo__img { animation: none !important; }
 }
