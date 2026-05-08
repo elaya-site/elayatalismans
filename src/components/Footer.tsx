@@ -42,7 +42,11 @@ export default function Footer() {
       </div>
       <div className="foot__bottom">
         <div>© ELAYA Talismans 2026</div>
-        <div>Acier inoxydable · Taille ajustable · Édition limitée</div>
+        <div className="foot__legal">
+          <Link href="/mentions-legales">Mentions légales</Link>
+          <Link href="/cgv">CGV</Link>
+          <Link href="/confidentialite">Confidentialité</Link>
+        </div>
       </div>
     </footer>
   );
