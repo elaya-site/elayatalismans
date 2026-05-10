@@ -49,7 +49,7 @@ export const products: Product[] = [
     heroName: "Kasha\nKatuwe",
     type: "collier",
     sub: "collier · acier inoxydable doré",
-    price: "€39",
+    price: "€29",
     talisman: [
       "Ce talisman évoque la chaleur du désert.",
       "Il apporte liberté et soif d'aventure.",
@@ -71,7 +71,6 @@ export const products: Product[] = [
     worn: "/assets/products/04-kasha-katuwe-worn.png",
     video: "/assets/video/collier-solo.mp4",
     ready: true,
-    inStock: false, /* TEST — rupture de stock */
   },
   {
     id: "rio-grande",
@@ -80,7 +79,7 @@ export const products: Product[] = [
     name: "Bracelet Rio Grande",
     type: "bracelet",
     sub: "bracelet · cordon tressé & médaille",
-    price: "€35",
+    price: "€25",
     talisman: [
       "Ce talisman incarne la beauté des paysages arides.",
       "Il donne puissance et rayonnement.",
@@ -97,7 +96,7 @@ export const products: Product[] = [
     name: "Boucles Canyon Road",
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
-    price: "€37",
+    price: "€27",
     talisman: [
       "Ce talisman révèle le désert sous une nuit étoilée.",
       "Il confère force et protection.",
@@ -114,7 +113,7 @@ export const products: Product[] = [
     name: "Bague Chimayo",
     type: "bague",
     sub: "bague · acier inoxydable & cristaux",
-    price: "€36",
+    price: "€26",
     talisman: [
       "Ce talisman suggère les reflets du soleil sur le sable chaud.",
       "Il suscite énergie et réconfort.",
@@ -134,7 +133,7 @@ export const products: Product[] = [
     heroName: "Calamity\nJane",
     type: "collier",
     sub: "collier · acier inoxydable doré",
-    price: "€37",
+    price: "€27",
     talisman: [
       "Ce talisman évoque les grands espaces et le vent des plaines.",
       "Il donne une sensation de liberté, féminine et assumée.",
@@ -165,7 +164,7 @@ export const products: Product[] = [
     heroName: "Annie\nOakley",
     type: "bracelet",
     sub: "bracelet · acier inoxydable doré",
-    price: "€39",
+    price: "€29",
     talisman: [
       "Ce talisman révèle la puissance et la beauté du Far West.",
       "Il apporte force et assurance.",
@@ -196,7 +195,7 @@ export const products: Product[] = [
     heroName: "Belle\nStarr",
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
-    price: "€34",
+    price: "€24",
     talisman: [
       "Ce talisman s'inspire des paysages sauvages de l'Ouest américain.",
       "Il insuffle allure et confiance… à travers le temps.",
@@ -227,7 +226,7 @@ export const products: Product[] = [
     heroName: "Sarah\nWinnemucca",
     type: "bague",
     sub: "bague · acier inoxydable doré",
-    price: "€39",
+    price: "€29",
     talisman: [
       "Ce talisman incarne la splendeur du Wild West.",
       "Il génère féminité et puissance.",
@@ -260,7 +259,7 @@ export const products: Product[] = [
     heroName: "Collier\nCherokee",
     type: "collier",
     sub: "collier · acier inoxydable doré & perles",
-    price: "€40",
+    price: "€30",
     talisman: [
       "Ce talisman s'inspire de la nature, douce mais puissante.",
       "Il apporte courage et paix intérieure.",
@@ -291,7 +290,7 @@ export const products: Product[] = [
     heroName: "Bracelet\nTomahawk",
     type: "bracelet",
     sub: "bracelet · acier inoxydable doré & perles",
-    price: "€36",
+    price: "€26",
     talisman: [
       "Ce talisman évoque les équilibres naturels.",
       "Il amène une sensation d'harmonie.",
@@ -322,7 +321,7 @@ export const products: Product[] = [
     heroName: "Boucles\nSioux",
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
-    price: "€40",
+    price: "€30",
     talisman: [
       "Ce talisman suggère les savoirs anciens.",
       "Il insuffle une énergie intérieure.",
@@ -353,7 +352,7 @@ export const products: Product[] = [
     heroName: "Bague\nLakota",
     type: "bague",
     sub: "bague · acier inoxydable doré",
-    price: "€35",
+    price: "€25",
     talisman: [
       "Ce talisman incarne la force de la nature.",
       "Il donne un ancrage rassurant.",
@@ -386,7 +385,7 @@ export const products: Product[] = [
     heroName: "Collier\nCaptain",
     type: "collier",
     sub: "collier · acier inoxydable doré",
-    price: "€38",
+    price: "€28",
     talisman: [
       "Ce talisman évoque le charme des bords de mer.",
       "Il donne fraîcheur et légèreté.",
@@ -417,7 +416,7 @@ export const products: Product[] = [
     heroName: "Bracelet\nBay",
     type: "bracelet",
     sub: "bracelet · acier inoxydable doré",
-    price: "€40",
+    price: "€30",
     talisman: [
       "Ce talisman révèle les trésors du rivage.",
       "Il apporte chance et joie.",
@@ -448,7 +447,7 @@ export const products: Product[] = [
     heroName: "Bague\nCompass",
     type: "bague",
     sub: "bague · acier inoxydable doré",
-    price: "€40",
+    price: "€30",
     talisman: [
       "Ce talisman suggère les reflets de l'eau sous le soleil.",
       "Il apporte élégance et apaisement.",
@@ -479,7 +478,7 @@ export const products: Product[] = [
     heroName: "Boucles\nNantucket",
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
-    price: "€35",
+    price: "€25",
     talisman: [
       "Ce talisman rappelle le scintillement de l'eau.",
       "Il confère chic et rayonnement.",
@@ -512,7 +511,7 @@ export const products: Product[] = [
     heroName: "Collier\nYellowstone",
     type: "collier",
     sub: "collier · acier inoxydable doré",
-    price: "€38",
+    price: "€28",
     talisman: [
       "Ce talisman incarne le calme des forêts.",
       "Il apporte équilibre et paix intérieure.",
@@ -543,7 +542,7 @@ export const products: Product[] = [
     heroName: "Bracelet\nYosemite",
     type: "bracelet",
     sub: "bracelet · acier inoxydable doré",
-    price: "€37",
+    price: "€27",
     talisman: [
       "Ce talisman évoque la richesse de la nature.",
       "Il insuffle une sensation de plénitude.",
@@ -574,7 +573,7 @@ export const products: Product[] = [
     heroName: "Boucles\nRedwood",
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
-    price: "€32",
+    price: "€22",
     talisman: [
       "Ce talisman suggère les arbres et leurs vertus.",
       "Il génère réconfort et apaisement.",
@@ -605,7 +604,7 @@ export const products: Product[] = [
     heroName: "Bague\nSierra",
     type: "bague",
     sub: "bague · acier inoxydable doré",
-    price: "€37",
+    price: "€27",
     talisman: [
       "Ce talisman dévoile la lumière de la forêt.",
       "Il donne une sensation de reconnexion à l'essentiel.",
@@ -638,7 +637,7 @@ export const products: Product[] = [
     heroName: "Collier\nManhattan",
     type: "collier",
     sub: "collier · acier inoxydable doré",
-    price: "€38",
+    price: "€28",
     talisman: [
       "Ce talisman évoque l'exaltation urbaine.",
       "Il insuffle assurance et enthousiasme.",
@@ -669,7 +668,7 @@ export const products: Product[] = [
     heroName: "Bracelet\nBleecker Street",
     type: "bracelet",
     sub: "bracelet · acier inoxydable doré",
-    price: "€38",
+    price: "€28",
     talisman: [
       "Ce talisman suggère l'effervescence citadine.",
       "Il amène puissance et réussite.",
@@ -700,7 +699,7 @@ export const products: Product[] = [
     heroName: "Boucles\nSkyline",
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
-    price: "€33",
+    price: "€23",
     talisman: [
       "Ce talisman révèle les lumières nocturnes de la ville.",
       "Il apporte prestance et convoitise.",
@@ -731,7 +730,7 @@ export const products: Product[] = [
     heroName: "Bague\nDowntown",
     type: "bague",
     sub: "bague · acier inoxydable doré",
-    price: "€38",
+    price: "€28",
     talisman: [
       "Ce talisman rappelle les lumières de la ville, vives et changeantes.",
       "Il donne une allure captivante.",
@@ -764,7 +763,7 @@ export const products: Product[] = [
     heroName: "Pince\nCalifornia",
     type: "pince",
     sub: "pince à cheveux · acier inoxydable doré",
-    price: "€38",
+    price: "€28",
     talisman: [
       "Ce talisman évoque la grâce des contes.",
       "Il apporte douceur et émerveillement.",
@@ -795,7 +794,7 @@ export const products: Product[] = [
     heroName: "Boucles\nCrystal",
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
-    price: "€36",
+    price: "€26",
     talisman: [
       "Ce talisman capture la lumière des cristaux.",
       "Il insuffle magie et délicatesse.",
@@ -826,7 +825,7 @@ export const products: Product[] = [
     heroName: "Barrettes\nCelestia",
     type: "barrette",
     sub: "barrettes · acier inoxydable doré",
-    price: "€34",
+    price: "€24",
     talisman: [
       "Ce talisman évoque les étoiles des nuits de conte.",
       "Il apporte grâce et enchantement.",
@@ -857,7 +856,7 @@ export const products: Product[] = [
     heroName: "Bague\nFleur de Lys",
     type: "bague",
     sub: "bague · acier inoxydable doré",
-    price: "€39",
+    price: "€29",
     talisman: [
       "Ce talisman rappelle les ornements royaux.",
       "Il confère noblesse et élégance intemporelle.",
