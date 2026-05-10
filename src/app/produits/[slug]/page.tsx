@@ -9,8 +9,10 @@ import Emphasis from "@/components/Emphasis";
 import Star from "@/components/Star";
 import Arrow from "@/components/Arrow";
 import StockAlertForm from "@/components/StockAlertForm";
+import ProductReviews from "@/components/ProductReviews";
 import { products, getProduct } from "@/data/products";
 import { getCollection } from "@/data/collections";
+import { reviewsByProduct } from "@/data/reviews";
 
 export function generateStaticParams() {
   return products.filter((p) => p.ready).map((p) => ({ slug: p.id }));
@@ -34,6 +36,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   if (!c) notFound();
 
   const isSantaFe = c.id === "santa-fe";
+  const productReviews = reviewsByProduct(p.id);
   const heroNameLines = (p.heroName ?? p.name).split("\n");
 
   return (
@@ -160,6 +163,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </section>
 
       <Reassurance />
+
+      {/* Avis clients */}
+      <ProductReviews productId={p.id} productName={p.name} reviews={productReviews} />
 
       {/* Closing */}
       <Reveal as="section" className="closing" threshold={0.2}>
