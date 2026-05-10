@@ -10,6 +10,7 @@ import Star from "@/components/Star";
 import Arrow from "@/components/Arrow";
 import StockAlertForm from "@/components/StockAlertForm";
 import ProductReviews from "@/components/ProductReviews";
+import AddToCartButton from "@/components/AddToCartButton";
 import { products, getProduct } from "@/data/products";
 import { getCollection } from "@/data/collections";
 import { reviewsByProduct } from "@/data/reviews";
@@ -143,7 +144,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               <>
                 <div className="detail__priceSub">— ou 3 fois sans frais.</div>
                 <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
-                  <button className="detail__cta" type="button">Ajouter au panier</button>
+                  <AddToCartButton
+                    id={p.id}
+                    name={p.name}
+                    price={parseInt(p.price.replace("€", ""))}
+                    image={p.still}
+                  />
                   <a href="#" className="detail__ctaGhost">
                     Garder en mémoire
                     <Arrow width={14} height={8} />

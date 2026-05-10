@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AudioProvider } from "@/components/AudioProvider";
 import AmbientAudioControl from "@/components/AmbientAudioControl";
+import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
   title: "ELAYA Talismans — Des bijoux inspirés de lieux et d'instants",
@@ -27,10 +28,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body suppressHydrationWarning>
-        <AudioProvider>
-          {children}
-          <AmbientAudioControl />
-        </AudioProvider>
+        <CartProvider>
+          <AudioProvider>
+            {children}
+            <AmbientAudioControl />
+          </AudioProvider>
+        </CartProvider>
       </body>
     </html>
   );
