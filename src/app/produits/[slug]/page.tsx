@@ -156,6 +156,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                   Expédition offerte dès 80€ — emballage cadeau soigné.<br />
                   Retours libres sous 30 jours.
                 </div>
+                <div className="detail__secure">
+                  <span>🔒 Paiement sécurisé</span>
+                  <span>· Visa · Mastercard · CB</span>
+                </div>
               </>
             ) : (
               /* ── Rupture de stock ── */
