@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
       {
         shipping_rate_data: {
           type: "fixed_amount",
-          fixed_amount: { amount: 490, currency: "eur" },
+          fixed_amount: { amount: 390, currency: "eur" },
           display_name: "Livraison standard",
           delivery_estimate: {
             minimum: { unit: "business_day", value: 3 },
