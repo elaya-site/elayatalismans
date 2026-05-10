@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     },
     body: JSON.stringify({
       from: process.env.RESEND_FROM ?? "ELAYA <onboarding@resend.dev>",
-      to: "contact@elayatalismans.com",
+      to: "daydie.laura@gmail.com",
       subject: `⭐ Nouvel avis — ${productName}`,
       html: `
         <h2>Nouvel avis client</h2>

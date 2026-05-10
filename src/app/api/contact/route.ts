@@ -38,7 +38,7 @@ export async function POST(request: Request) {
     }
 
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
-    const CONTACT_EMAIL  = process.env.CONTACT_EMAIL ?? "contact@elayatalismans.com";
+    const CONTACT_EMAIL  = process.env.CONTACT_EMAIL ?? "daydie.laura@gmail.com";
     const RESEND_FROM    = process.env.RESEND_FROM ?? "ELAYA <onboarding@resend.dev>";
 
     if (!RESEND_API_KEY) {
