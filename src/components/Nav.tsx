@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Star from "./Star";
+import { useCart } from "@/context/CartContext";
 
 type NavLink = { href: string; label: string };
 
@@ -14,6 +15,7 @@ const DEFAULT_LINKS: NavLink[] = [
 
 export default function Nav({ links = DEFAULT_LINKS }: { links?: NavLink[] }) {
   const [scrolled, setScrolled] = useState(false);
+  const { count } = useCart();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -33,8 +35,10 @@ export default function Nav({ links = DEFAULT_LINKS }: { links?: NavLink[] }) {
         <Star size={9} /> ELAYA <Star size={9} />
       </Link>
       <div className="nav__right">
-        <a href="#">Recherche</a>
-        <a href="#">Panier <span style={{ opacity: .6 }}>(0)</span></a>
+        <Link href="/panier" className="nav__cart">
+          Panier
+          {count > 0 && <span className="nav__cart-count">{count}</span>}
+        </Link>
       </div>
     </nav>
   );

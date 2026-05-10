@@ -121,12 +121,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <div className="detail__label">Détails</div>
             <h3>Façonné pour <em>durer.</em></h3>
             <ul className="detail__list">
-              {(p.details ?? []).map((d) => (
-                <li key={d.label}>
-                  <dt>{d.label}</dt>
-                  <dd>{d.value}</dd>
-                </li>
-              ))}
+              <li><dt>Matière</dt><dd>Acier inoxydable doré</dd></li>
+              <li><dt>Résistance</dt><dd>Eau, sport, quotidien</dd></li>
+              <li><dt>Entretien</dt><dd>Hypoallergénique · ne ternit pas</dd></li>
             </ul>
           </div>
           <div className="detail__col">
