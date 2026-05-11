@@ -62,7 +62,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
       {/* Immersive intro */}
       <section className="pintro is-revealed">
-        <div className="pintro__media">
+        <div className={`pintro__media${p.id === "kasha-katuwe" ? " pintro__media--crop" : ""}`}>
           {p.video ? <video src={p.video} autoPlay muted loop playsInline /> : null}
         </div>
         <div className="pintro__veil" />

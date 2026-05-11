@@ -5,14 +5,24 @@ import AmbientAudioControl from "@/components/AmbientAudioControl";
 import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
-  title: "ELAYA Talismans — Des bijoux inspirés de lieux et d'instants",
+  title: "ELAYA Talismans — Bijoux acier inoxydable doré | 7 collections",
   description:
-    "ELAYA transforme des lieux et des émotions en talismans modernes à porter chaque jour. Sept collections, sept univers émotionnels.",
+    "Bijoux en acier inoxydable doré inspirés de lieux et d'émotions. 7 collections — Santa Fe, Cheyenne, Newport, Sequoia, Wakan Tanka, New York, Royal Castle. Livraison France 3,90€.",
+  keywords: "bijoux acier inoxydable, collier femme, bracelet femme, boucles d'oreilles, bague femme, bijoux dorés, talismans, ELAYA",
   openGraph: {
-    title: "ELAYA Talismans",
-    description: "Des bijoux inspirés de lieux et d'instants. Talismans en édition limitée.",
+    title: "ELAYA Talismans — Bijoux acier inoxydable doré",
+    description: "7 collections de bijoux inspirées de lieux et d'émotions. Acier inoxydable doré, hypoallergénique, livraison France.",
     type: "website",
     locale: "fr_FR",
+    url: "https://www.elayatalismans.com",
+    siteName: "ELAYA Talismans",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://www.elayatalismans.com",
   },
 };
 

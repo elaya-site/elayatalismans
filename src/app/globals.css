@@ -2250,3 +2250,22 @@ a { color: inherit; text-decoration: none; }
 .success h1 em { font-style: italic; color: var(--ochre); }
 .success p { font-family: var(--serif); font-size: 18px; color: var(--sand); line-height: 1.7; margin-bottom: 16px; }
 .success__back { display: inline-block; margin-top: 40px; color: var(--ochre); font-family: var(--serif); font-style: italic; font-size: 18px; }
+
+/* ─── Achat express ─── */
+.detail__cta-group { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.detail__cta-express { background: transparent; border: 1px solid var(--ochre); color: var(--ochre); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; padding: 14px 28px; cursor: pointer; transition: background .2s, color .2s; }
+.detail__cta-express:hover { background: var(--ochre); color: var(--ink); }
+.detail__cta-express:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ─── Crop vidéo Santa Fe (masquer watermark "veo") ─── */
+.pintro__media--crop { overflow: hidden; }
+.pintro__media--crop video { transform: scale(1.08); transform-origin: center 90%; }
+
+/* ─── Mobile overflow fix ─── */
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; max-width: 100vw; }
+  .cseq__item { flex-direction: column !important; height: auto !important; }
+  .cseq__img { width: 100% !important; height: 56vw !important; }
+  .cseq__text { width: 100% !important; text-align: left !important; border-left: none !important; border-right: none !important; border-top: 1px solid rgba(180,148,90,0.15) !important; padding: 24px 20px !important; }
+  .gallery__grid { grid-template-columns: 1fr !important; }
+}
