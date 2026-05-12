@@ -9,6 +9,7 @@ import Emphasis from "@/components/Emphasis";
 import Star from "@/components/Star";
 import Arrow from "@/components/Arrow";
 import StockAlertForm from "@/components/StockAlertForm";
+import LazyVideo from "@/components/LazyVideo";
 import ProductReviews from "@/components/ProductReviews";
 import AddToCartButton from "@/components/AddToCartButton";
 import { products, getProduct } from "@/data/products";
@@ -63,7 +64,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       {/* Immersive intro */}
       <section className="pintro is-revealed">
         <div className={`pintro__media${p.id === "kasha-katuwe" ? " pintro__media--crop" : ""}`}>
-          {p.video ? <video src={p.video} autoPlay muted loop playsInline /> : null}
+          {p.video ? <LazyVideo src={p.video} eager /> : null}
         </div>
         <div className="pintro__veil" />
         <div className="pintro__chrome">

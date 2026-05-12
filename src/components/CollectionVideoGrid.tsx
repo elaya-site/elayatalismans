@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import type { Product } from "@/data/products";
 import Arrow from "@/components/Arrow";
+import LazyVideo from "@/components/LazyVideo";
 
 /**
  * Grille vidéo unifiée — bas de toutes les pages collection.
@@ -51,12 +52,8 @@ export default function CollectionVideoGrid({ products }: { products: Product[] 
                 }
               >
                 {p.video ? (
-                  <video
+                  <LazyVideo
                     src={p.video}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
                     className="vgrid__video"
                     style={
                       p.videoPosition
