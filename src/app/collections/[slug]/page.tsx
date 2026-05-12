@@ -145,7 +145,6 @@ export default async function CollectionPage({ params }: { params: Promise<{ slu
           <div className="hero__foot">
             {c.coords ? <div className="fade-up delay-4">{c.coords}</div> : <div />}
             <div className="scroll fade-up delay-5">
-              <span>Faites défiler</span>
               <span className="line" />
             </div>
             <div className="fade-up delay-4" style={{ textAlign: "right" }}>
