@@ -34,11 +34,11 @@ export default function ProductCard({ product, index }: { product: Product; inde
         <div className="pcard__corner"><span className="dot" /> Édition limitée</div>
         <div className="layer layer--still">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={product.still} alt={product.name} />
+          <img src={product.still} alt={product.name} loading="lazy" />
         </div>
         <div className="layer layer--worn">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={product.worn} alt={`${product.name} porté`} />
+          <img src={product.worn} alt={`${product.name} porté`} loading="lazy" />
         </div>
         <div className="pcard__hint">Survoler — voir porté</div>
       </div>

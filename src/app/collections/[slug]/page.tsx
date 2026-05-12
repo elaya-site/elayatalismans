@@ -10,6 +10,7 @@ import Reassurance from "@/components/Reassurance";
 import Arrow from "@/components/Arrow";
 import Emphasis from "@/components/Emphasis";
 import CollectionVideoGrid from "@/components/CollectionVideoGrid";
+import LazyVideo from "@/components/LazyVideo";
 import BrandGhostLogo from "@/components/BrandGhostLogo";
 import CollectionPictogram from "@/components/CollectionPictogram";
 import { collections, getCollection } from "@/data/collections";
@@ -103,7 +104,7 @@ export default async function CollectionPage({ params }: { params: Promise<{ slu
       <HeroParallax className="hero hero--collection" parallax={0.25}>
         <div className="hero__media">
           {c.heroVideo ? (
-            <video src={c.heroVideo} autoPlay muted loop playsInline />
+            <LazyVideo src={c.heroVideo} eager />
           ) : c.heroImage ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={c.heroImage} alt="" />

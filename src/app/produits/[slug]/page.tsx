@@ -103,13 +103,13 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <div className="gallery__cell">
             <div className="gallery__index">№ 01 · Seul</div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={p.still} alt={p.name} />
+            <img src={p.still} alt={p.name} loading="lazy" />
             <div className="gallery__caption">Le talisman, en lumière naturelle.</div>
           </div>
           <div className="gallery__cell gallery__cell--worn">
             <div className="gallery__index">№ 02 · Porté</div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={p.worn} alt={`${p.name} porté`} />
+            <img src={p.worn} alt={`${p.name} porté`} loading="lazy" />
             <div className="gallery__caption">Porté chaque jour — comme un souvenir.</div>
           </div>
         </div>
