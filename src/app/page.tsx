@@ -5,6 +5,7 @@ import HeroParallax from "@/components/HeroParallax";
 import Reveal from "@/components/Reveal";
 import BrandGhostLogo from "@/components/BrandGhostLogo";
 import CollectionSequence from "@/components/CollectionSequence";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export default function HomePage() {
   return (
@@ -86,6 +87,19 @@ export default function HomePage() {
         </div>
         <div className="talisman__sig fade-up delay-1">— ELAYA, depuis Paris</div>
       </Reveal>
+
+      {/* Newsletter — 10% de bienvenue */}
+      <section className="nl-section">
+        <div className="nl-inner">
+          <div className="nl-star"><Star size={12} /></div>
+          <div className="nl-eyebrow">Offre de bienvenue</div>
+          <h2 className="nl-title"><em>10% offerts</em><br />sur votre première commande.</h2>
+          <p className="nl-body">
+            Inscrivez-vous et recevez votre code promo exclusif — immédiatement.
+          </p>
+          <NewsletterForm />
+        </div>
+      </section>
 
       <Footer />
     </>

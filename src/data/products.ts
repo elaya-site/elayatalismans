@@ -87,7 +87,7 @@ export const products: Product[] = [
     still: "/assets/products/03-rio-grande-still.png",
     worn: "/assets/products/03-rio-grande-worn.png",
     video: "/assets/video/bracelet-solo.mp4",
-    ready: false,
+    ready: true,
   },
   {
     id: "canyon-road",
@@ -104,7 +104,7 @@ export const products: Product[] = [
     still: "/assets/products/02-canyon-road-still.png",
     worn: "/assets/products/02-canyon-road-worn.png",
     video: "/assets/video/earrings.mp4",
-    ready: false,
+    ready: true,
   },
   {
     id: "chimayo",
@@ -121,7 +121,7 @@ export const products: Product[] = [
     still: "/assets/products/01-chimayo-still.png",
     worn: "/assets/products/01-chimayo-worn.png",
     video: "/assets/video/ring.mp4",
-    ready: false,
+    ready: true,
   },
 
   /* ─── CHEYENNE ─── */

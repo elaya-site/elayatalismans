@@ -55,6 +55,7 @@ export async function POST(req: NextRequest) {
         },
       },
     ],
+    allow_promotion_codes: true,
     success_url: `${siteUrl}/commande/succes?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${siteUrl}/panier`,
     locale: "fr",
