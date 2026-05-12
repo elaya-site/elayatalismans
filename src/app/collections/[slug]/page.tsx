@@ -11,6 +11,7 @@ import Arrow from "@/components/Arrow";
 import Emphasis from "@/components/Emphasis";
 import CollectionVideoGrid from "@/components/CollectionVideoGrid";
 import LazyVideo from "@/components/LazyVideo";
+import Image from "next/image";
 import BrandGhostLogo from "@/components/BrandGhostLogo";
 import CollectionPictogram from "@/components/CollectionPictogram";
 import { collections, getCollection } from "@/data/collections";
@@ -20,13 +21,30 @@ export function generateStaticParams() {
   return collections.map((c) => ({ slug: c.id }));
 }
 
+const collectionKeywords: Record<string, string> = {
+  "santa-fe":     "bijoux bohème western, bijoux désert doré, collier soleil femme, bijoux aventure, bijoux Nouveau-Mexique",
+  "sequoia":      "bijoux nature bohème, bijoux forêt, collier arbre femme, bijoux zen, bijoux Californie",
+  "cheyenne":     "bijoux Far West femme, bijoux liberté, bracelet western doré, bijoux audacieux, bijoux Wyoming",
+  "newport":      "bijoux élégants femme, bijoux bord de mer, collier chic doré, bijoux raffinés, bijoux côtiers",
+  "wakan-tanka":  "bijoux spirituels femme, bijoux amérindiens, bijoux totem, collier plume doré, bijoux Montana",
+  "new-york":     "bijoux urbains femme, bijoux modernes tendance, collier graphique doré, bijoux city, bijoux New York",
+  "royal-castle": "bijoux féeriques femme, bijoux délicats, collier étoile doré, bijoux romantiques, bijoux rêve",
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const c = getCollection(slug);
   if (!c) return {};
   return {
-    title: `${c.name} — ELAYA Talismans`,
-    description: c.power,
+    title: `Collection ${c.name} — Bijoux bohème dorés | ELAYA Talismans`,
+    description: `${c.power} Bijoux en acier inoxydable doré, résistants à l'eau, hypoallergéniques. Colliers, bracelets, boucles d'oreilles et bagues.`,
+    keywords: `${collectionKeywords[c.id] ?? ""}, bijoux acier inoxydable, bijoux tendance femme, ELAYA talismans`,
+    openGraph: {
+      title: `Collection ${c.name} — ELAYA Talismans`,
+      description: `${c.power} Bijoux dorés résistants, hypoallergéniques.`,
+      images: c.heroImage ? [{ url: c.heroImage, alt: `Collection ${c.name} — ELAYA Talismans` }] : [],
+    },
+    alternates: { canonical: `https://www.elayatalismans.com/collections/${c.id}` },
   };
 }
 
@@ -106,8 +124,7 @@ export default async function CollectionPage({ params }: { params: Promise<{ slu
           {c.heroVideo ? (
             <LazyVideo src={c.heroVideo} eager />
           ) : c.heroImage ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={c.heroImage} alt="" />
+            <Image src={c.heroImage} alt={`Collection ${c.name} — ELAYA Talismans`} fill style={{ objectFit: "cover" }} priority sizes="100vw" />
           ) : null}
         </div>
         <div className="hero__veil" />

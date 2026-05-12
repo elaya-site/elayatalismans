@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -24,9 +25,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = getProduct(slug);
   if (!p) return {};
+  const typeLabel: Record<string, string> = {
+    collier: "collier femme bohème doré",
+    bracelet: "bracelet femme doré",
+    boucles: "boucles d'oreilles femme tendance",
+    bague: "bague femme acier doré",
+    pince: "pince à cheveux dorée",
+    barrette: "barrette cheveux dorée",
+  };
+  const label = typeLabel[p.type] ?? "bijou femme doré";
   return {
-    title: `${p.name} — ELAYA Talismans`,
-    description: p.talisman.join(" "),
+    title: `${p.name} — ${label} | ELAYA Talismans`,
+    description: `${p.talisman.join(" ")} ${p.name} en acier inoxydable doré — résistant à l'eau, hypoallergénique, ne ternit pas. ${p.price}.`,
+    keywords: `${p.name}, ${label}, bijoux bohème, bijoux acier inoxydable, bijoux tendance femme, bijoux résistants eau, bijoux hypoallergéniques, ELAYA talismans`,
+    openGraph: {
+      title: `${p.name} — ELAYA Talismans`,
+      description: p.talisman.join(" "),
+      images: [{ url: p.still, alt: p.name }],
+    },
+    alternates: { canonical: `https://www.elayatalismans.com/produits/${p.id}` },
   };
 }
 
@@ -41,8 +58,32 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const productReviews = reviewsByProduct(p.id);
   const heroNameLines = (p.heroName ?? p.name).split("\n");
 
+  const priceNum = parseInt(p.price.replace("€", "").trim());
+  const jsonLd = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    name: p.name,
+    description: p.talisman.join(" "),
+    image: `https://www.elayatalismans.com${p.still}`,
+    brand: { "@type": "Brand", name: "ELAYA Talismans" },
+    offers: {
+      "@type": "Offer",
+      url: `https://www.elayatalismans.com/produits/${p.id}`,
+      priceCurrency: "EUR",
+      price: priceNum,
+      availability: (p.inStock ?? true) ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: { "@type": "MonetaryAmount", value: "3.90", currency: "EUR" },
+        shippingDestination: { "@type": "DefinedRegion", addressCountry: "FR" },
+      },
+    },
+    material: "Acier inoxydable doré",
+  };
+
   return (
     <div className={isSantaFe ? "page-santa-fe" : ""}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {isSantaFe && <GoldenDust />}
       <Nav
         links={[
@@ -102,14 +143,26 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <div className="gallery__grid">
           <div className="gallery__cell">
             <div className="gallery__index">№ 01 · Seul</div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={p.still} alt={p.name} loading="lazy" />
+            <Image
+              src={p.still}
+              alt={`${p.name} — bijou en acier inoxydable doré`}
+              width={800}
+              height={1000}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
             <div className="gallery__caption">Le talisman, en lumière naturelle.</div>
           </div>
           <div className="gallery__cell gallery__cell--worn">
             <div className="gallery__index">№ 02 · Porté</div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={p.worn} alt={`${p.name} porté`} loading="lazy" />
+            <Image
+              src={p.worn}
+              alt={`${p.name} porté — collier bracelet boucles femme`}
+              width={800}
+              height={1000}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
             <div className="gallery__caption">Porté chaque jour — comme un souvenir.</div>
           </div>
         </div>

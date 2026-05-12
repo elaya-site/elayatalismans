@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { Product } from "@/data/products";
 
@@ -33,12 +34,22 @@ export default function ProductCard({ product, index }: { product: Product; inde
         <div className="pcard__index">№ {num}</div>
         <div className="pcard__corner"><span className="dot" /> Édition limitée</div>
         <div className="layer layer--still">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={product.still} alt={product.name} loading="lazy" />
+          <Image
+            src={product.still}
+            alt={`${product.name} — bijou femme doré`}
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
         <div className="layer layer--worn">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={product.worn} alt={`${product.name} porté`} loading="lazy" />
+          <Image
+            src={product.worn}
+            alt={`${product.name} porté`}
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
         <div className="pcard__hint">Survoler — voir porté</div>
       </div>

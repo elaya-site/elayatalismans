@@ -5,17 +5,34 @@ import AmbientAudioControl from "@/components/AmbientAudioControl";
 import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
-  title: "ELAYA Talismans — Bijoux acier inoxydable doré | 7 collections",
+  title: "ELAYA Talismans — Bijoux bohème dorés | Acier inoxydable résistant",
   description:
-    "Bijoux en acier inoxydable doré inspirés de lieux et d'émotions. 7 collections — Santa Fe, Cheyenne, Newport, Sequoia, Wakan Tanka, New York, Royal Castle. Livraison France 3,90€.",
-  keywords: "bijoux acier inoxydable, collier femme, bracelet femme, boucles d'oreilles, bague femme, bijoux dorés, talismans, ELAYA",
+    "Bijoux bohème en acier inoxydable doré — colliers, bracelets, boucles d'oreilles et bagues tendance. Résistants à l'eau, hypoallergéniques, inspirés de grands voyages. 7 collections uniques. Livraison France dès 3,90€.",
+  keywords: [
+    "bijoux bohème",
+    "bijoux tendance femme",
+    "bijoux acier inoxydable doré",
+    "collier femme bohème",
+    "bracelet femme doré",
+    "boucles d'oreilles tendance",
+    "bague femme acier",
+    "bijoux résistants eau",
+    "bijoux hypoallergéniques",
+    "bijoux western",
+    "bijoux talisman",
+    "bijoux inspirés voyage",
+    "bijoux ne ternissent pas",
+    "bijoux cadeau femme",
+    "ELAYA talismans",
+  ].join(", "),
   openGraph: {
-    title: "ELAYA Talismans — Bijoux acier inoxydable doré",
-    description: "7 collections de bijoux inspirées de lieux et d'émotions. Acier inoxydable doré, hypoallergénique, livraison France.",
+    title: "ELAYA Talismans — Bijoux bohème dorés",
+    description: "Colliers, bracelets, boucles d'oreilles et bagues bohème en acier inoxydable doré. Résistants, hypoallergéniques, inspirés de grands voyages.",
     type: "website",
     locale: "fr_FR",
     url: "https://www.elayatalismans.com",
     siteName: "ELAYA Talismans",
+    images: [{ url: "/assets/home-hero.png", width: 1200, height: 630, alt: "ELAYA Talismans — Bijoux bohème dorés" }],
   },
   robots: {
     index: true,
