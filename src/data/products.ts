@@ -38,6 +38,8 @@ export type Product = {
    * Set to `false` to activate the stock-alert capture form.
    */
   inStock?: boolean;
+  /** Sale price (e.g. "€19"). When set, the original price is shown crossed out. */
+  salePrice?: string;
 };
 
 export const products: Product[] = [
@@ -80,6 +82,7 @@ export const products: Product[] = [
     type: "bracelet",
     sub: "bracelet · cordon tressé & médaille",
     price: "€25",
+    salePrice: "€17.50",
     talisman: [
       "Ce talisman incarne la beauté des paysages arides.",
       "Il donne puissance et rayonnement.",
@@ -97,6 +100,7 @@ export const products: Product[] = [
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
     price: "€27",
+    salePrice: "€19",
     talisman: [
       "Ce talisman révèle le désert sous une nuit étoilée.",
       "Il confère force et protection.",
@@ -134,6 +138,7 @@ export const products: Product[] = [
     type: "collier",
     sub: "collier · acier inoxydable doré",
     price: "€27",
+    salePrice: "€19",
     talisman: [
       "Ce talisman évoque les grands espaces et le vent des plaines.",
       "Il donne une sensation de liberté, féminine et assumée.",
@@ -196,6 +201,7 @@ export const products: Product[] = [
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
     price: "€24",
+    salePrice: "€17",
     talisman: [
       "Ce talisman s'inspire des paysages sauvages de l'Ouest américain.",
       "Il insuffle allure et confiance… à travers le temps.",
@@ -291,6 +297,7 @@ export const products: Product[] = [
     type: "bracelet",
     sub: "bracelet · acier inoxydable doré & perles",
     price: "€26",
+    salePrice: "€18",
     talisman: [
       "Ce talisman évoque les équilibres naturels.",
       "Il amène une sensation d'harmonie.",
@@ -353,6 +360,7 @@ export const products: Product[] = [
     type: "bague",
     sub: "bague · acier inoxydable doré",
     price: "€25",
+    salePrice: "€17.50",
     talisman: [
       "Ce talisman incarne la force de la nature.",
       "Il donne un ancrage rassurant.",
@@ -386,6 +394,7 @@ export const products: Product[] = [
     type: "collier",
     sub: "collier · acier inoxydable doré",
     price: "€28",
+    salePrice: "€20",
     talisman: [
       "Ce talisman évoque le charme des bords de mer.",
       "Il donne fraîcheur et légèreté.",
@@ -448,6 +457,7 @@ export const products: Product[] = [
     type: "bague",
     sub: "bague · acier inoxydable doré",
     price: "€30",
+    salePrice: "€21",
     talisman: [
       "Ce talisman suggère les reflets de l'eau sous le soleil.",
       "Il apporte élégance et apaisement.",
@@ -543,6 +553,7 @@ export const products: Product[] = [
     type: "bracelet",
     sub: "bracelet · acier inoxydable doré",
     price: "€27",
+    salePrice: "€19",
     talisman: [
       "Ce talisman évoque la richesse de la nature.",
       "Il insuffle une sensation de plénitude.",
@@ -574,6 +585,7 @@ export const products: Product[] = [
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
     price: "€22",
+    salePrice: "€15.50",
     talisman: [
       "Ce talisman suggère les arbres et leurs vertus.",
       "Il génère réconfort et apaisement.",
@@ -638,6 +650,7 @@ export const products: Product[] = [
     type: "collier",
     sub: "collier · acier inoxydable doré",
     price: "€28",
+    salePrice: "€20",
     talisman: [
       "Ce talisman évoque l'exaltation urbaine.",
       "Il insuffle assurance et enthousiasme.",
@@ -700,6 +713,7 @@ export const products: Product[] = [
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
     price: "€23",
+    salePrice: "€16",
     talisman: [
       "Ce talisman révèle les lumières nocturnes de la ville.",
       "Il apporte prestance et convoitise.",
@@ -764,6 +778,7 @@ export const products: Product[] = [
     type: "pince",
     sub: "pince à cheveux · acier inoxydable doré",
     price: "€28",
+    salePrice: "€20",
     talisman: [
       "Ce talisman évoque la grâce des contes.",
       "Il apporte douceur et émerveillement.",
@@ -795,6 +810,7 @@ export const products: Product[] = [
     type: "boucles",
     sub: "boucles d'oreilles · acier inoxydable doré",
     price: "€26",
+    salePrice: "€18",
     talisman: [
       "Ce talisman capture la lumière des cristaux.",
       "Il insuffle magie et délicatesse.",

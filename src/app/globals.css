@@ -319,7 +319,10 @@ a { color: inherit; text-decoration: none; }
 .pcard__title { font-family: var(--serif); font-size: 30px; font-weight: 300; letter-spacing: -.005em; line-height: 1.1; color: var(--bone); }
 .pcard__title em { font-style: italic; color: var(--ochre); }
 .pcard__sub { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--sand-soft); margin-top: 6px; }
-.pcard__price { font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: var(--sand); white-space: nowrap; opacity: .8; }
+.pcard__price { font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: var(--sand); white-space: nowrap; opacity: .8; display: flex; align-items: center; gap: 6px; }
+.pcard__price-old { text-decoration: line-through; opacity: .5; }
+.pcard__price-sale { color: var(--ochre); opacity: 1; }
+.pcard__sale-badge { position: absolute; top: 12px; left: 12px; background: var(--ochre); color: var(--ink); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; padding: 4px 8px; }
 .pcard__cta { display: inline-flex; align-items: center; gap: 14px; margin-top: 20px; font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: var(--bone); padding-bottom: 6px; border-bottom: 1px solid var(--line); transition: gap .5s ease, border-color .5s ease; }
 .pcard:hover .pcard__cta { gap: 24px; border-color: var(--ochre); }
 .pcard__cta svg { width: 14px; height: 8px; transition: transform .6s cubic-bezier(.2, .8, .2, 1); }
@@ -485,6 +488,10 @@ a { color: inherit; text-decoration: none; }
 .detail__list dt { letter-spacing: .18em; text-transform: uppercase; font-family: var(--sans); font-weight: 400; font-size: 10.5px; align-self: center; color: var(--ochre); opacity: .75; }
 .detail__list dd { color: var(--bone); }
 .detail__price { font-family: var(--serif); font-weight: 300; font-size: clamp(40px, 4vw, 56px); color: var(--bone); margin-bottom: 8px; letter-spacing: -.005em; }
+.detail__price-wrap { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
+.detail__price--old { text-decoration: line-through; opacity: .4; font-size: clamp(24px, 2.5vw, 36px); margin-bottom: 0; }
+.detail__price--sale { color: var(--ochre); margin-bottom: 0; }
+.detail__sale-badge { font-family: var(--sans); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; background: var(--ochre); color: var(--ink); padding: 4px 10px; align-self: center; }
 .detail__priceSub { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--sand-soft); margin-bottom: 48px; }
 .detail__cta { display: inline-flex; align-items: center; justify-content: center; gap: 18px; padding: 22px 44px; background: var(--ochre); color: var(--ink); font-size: 11px; letter-spacing: .32em; text-transform: uppercase; font-weight: 500; border: 1px solid var(--ochre); transition: all .6s ease; }
 .detail__cta:hover { background: transparent; color: var(--ochre); }

@@ -188,7 +188,15 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               const rest = m?.[2] ?? p.name;
               return <h3>{prefix} <em>{rest}.</em></h3>;
             })()}
-            <div className="detail__price">{p.price}</div>
+            {p.salePrice ? (
+              <div className="detail__price-wrap">
+                <span className="detail__price detail__price--old">{p.price}</span>
+                <span className="detail__price detail__price--sale">{p.salePrice}</span>
+                <span className="detail__sale-badge">Soldes −30 %</span>
+              </div>
+            ) : (
+              <div className="detail__price">{p.price}</div>
+            )}
 
             {(p.inStock ?? true) ? (
               /* ── En stock ── */

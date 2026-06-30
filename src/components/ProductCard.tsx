@@ -58,8 +58,16 @@ export default function ProductCard({ product, index }: { product: Product; inde
           <div className="pcard__title">{product.name}</div>
           <div className="pcard__sub">{product.sub}</div>
         </div>
-        <div className="pcard__price">{product.price}</div>
+        <div className="pcard__price">
+          {product.salePrice ? (
+            <>
+              <span className="pcard__price-old">{product.price}</span>
+              <span className="pcard__price-sale">{product.salePrice}</span>
+            </>
+          ) : product.price}
+        </div>
       </div>
+      {product.salePrice && <div className="pcard__sale-badge">−30 %</div>}
       <div className="pcard__talisman">
         {product.talisman.map((line, i) => (
           <p key={i}>{line}</p>
