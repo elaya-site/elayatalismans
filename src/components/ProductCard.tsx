@@ -52,6 +52,7 @@ export default function ProductCard({ product, index }: { product: Product; inde
           />
         </div>
         <div className="pcard__hint">Survoler — voir porté</div>
+        {product.salePrice && <div className="pcard__sale-badge">−30 %</div>}
       </div>
       <div className="pcard__meta">
         <div>
@@ -67,7 +68,6 @@ export default function ProductCard({ product, index }: { product: Product; inde
           ) : product.price}
         </div>
       </div>
-      {product.salePrice && <div className="pcard__sale-badge">−30 %</div>}
       <div className="pcard__talisman">
         {product.talisman.map((line, i) => (
           <p key={i}>{line}</p>
