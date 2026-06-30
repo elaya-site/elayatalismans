@@ -35,7 +35,8 @@ export default function Footer() {
           <h4>Contact</h4>
           <ul>
             <li><Link href="/contact">Nous écrire</Link></li>
-            <li><Link href="/instagram">Instagram</Link></li>
+            <li><a href="https://www.instagram.com/elaya.talismans/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61576732449496" target="_blank" rel="noopener noreferrer">Facebook</a></li>
             <li><Link href="/newsletter">Newsletter</Link></li>
           </ul>
         </div>
