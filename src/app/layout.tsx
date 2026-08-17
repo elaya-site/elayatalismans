@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AudioProvider } from "@/components/AudioProvider";
 import AmbientAudioControl from "@/components/AmbientAudioControl";
+import VacationBanner from "@/components/VacationBanner";
 import { CartProvider } from "@/context/CartContext";
+import { VACATION_MODE } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "ELAYA Talismans — Bijoux bohème dorés | Acier inoxydable résistant",
@@ -68,7 +70,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         `}} />
         <noscript dangerouslySetInnerHTML={{ __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2439752579771130&ev=PageView&noscript=1"/>` }} />
       </head>
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className={VACATION_MODE ? "has-vacation-banner" : undefined}>
+        {VACATION_MODE && <VacationBanner />}
         <CartProvider>
           <AudioProvider>
             {children}
